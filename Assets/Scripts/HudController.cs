@@ -21,7 +21,7 @@ public class HudController : MonoBehaviour
         _agentTargets.text = "";
 
         foreach (IAgentInfo goTo in _goTos) {
-            _agentTargets.text += goTo.GetInfo() + " ";
+            _agentTargets.text += goTo.GetInfo() + "\n";
         }
 
     }

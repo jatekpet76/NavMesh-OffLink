@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class GoToController : MonoBehaviour, IAgentInfo
 {
     [SerializeField] List<GameObject> _waitpoints;
+	GameObject _waitpoint;
 	int _next = 0;
 	NavMeshAgent _agent;
 
@@ -39,25 +40,33 @@ public class GoToController : MonoBehaviour, IAgentInfo
 
     void MoveTo()
     {
-		if (_agent.destination == null) {
-			_agent.destination = _waitpoints[_next].transform.position;
+		if (_waitpoint == null) {
+			_waitpoint = _waitpoints[_next];
+			_agent.destination = _waitpoint.transform.position;
 
-			Debug.Log("Set the first destination");
+			Debug.Log(gameObject.name + " Set the first destination");
+		} else {
+			Debug.Log(gameObject.name + " Has destination " + _agent.destination);
 		}
 
-		if (Vector3.Distance(transform.position, _waitpoints[_next].transform.position) < 0.3) {
-			_agent.destination = _waitpoints[_next].transform.position;
-			_next++;
+		var distance = Vector3.Distance(transform.position, _waitpoint.transform.position);
 
-			Debug.Log("Set the next destination: " + _next);
+		if (distance < 0.3) {
+			_next++;
+			_waitpoint = _waitpoints[_next];
+			_agent.destination = _waitpoint.transform.position;
+
+			Debug.Log(gameObject.name + " Set the next destination: " + _next);
 
 			if (_next > _waitpoints.Count-1) {
 				_next = 0;
 
-				Debug.Log("Go back to First one");
+				Debug.Log(gameObject.name + " Go back to First one");
 			}
+		} else {
+			Debug.Log(gameObject.name + " Far from destination "+_agent.hasPath);
 		}
 
-		_info = string.Format("{0} to {1}", gameObject.name, _waitpoints[_next].name);
+		_info = string.Format("{0} to {1} : {2}m - {3} - {4}", gameObject.name, _waitpoint.name, distance, _agent.hasPath, _agent.destination.ToString("F3"));
     }
 }
