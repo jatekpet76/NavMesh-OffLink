@@ -2306,7 +2306,7 @@ PrefabInstance:
     - target: {fileID: 3172838258682602066, guid: 944c75ec00c8dd3418938ed36afa88cd,
         type: 3}
       propertyPath: m_Name
-      value: Waitpoint Start
+      value: WaitpointStart
       objectReference: {fileID: 0}
     - target: {fileID: 3172838258682602078, guid: 944c75ec00c8dd3418938ed36afa88cd,
         type: 3}
