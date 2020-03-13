@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MouseInputController : MonoBehaviour
+public class MouseInputController : MonoBehaviour, IAgentInfo
 {
-    private NavMeshAgent _agent;
+    NavMeshAgent _agent;
+    string _info;
+
+    public string GetInfo()
+    {
+        return _info;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +29,8 @@ public class MouseInputController : MonoBehaviour
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, 100)) {
+                _info = string.Format("{0} to {1}", gameObject.name, hit.transform.gameObject.name);
+
                 _agent.destination = hit.transform.position;
             }
         }

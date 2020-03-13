@@ -411,12 +411,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waitpoints:
-  - {fileID: 1320559224}
-  - {fileID: 343723915}
-  - {fileID: 2104434474}
-  - {fileID: 953985361}
-  - {fileID: 783441645}
-  - {fileID: 1563328371}
+  - {fileID: 504769915}
+  - {fileID: 1728464400}
+  - {fileID: 363437167}
+  - {fileID: 369032414}
+  - {fileID: 787041096}
+  - {fileID: 1678125919}
 --- !u!1 &145129366
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +815,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3172838258488339925}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &363437167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3172838258682602066, guid: 944c75ec00c8dd3418938ed36afa88cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 2104434473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &369032414 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3172838258682602066, guid: 944c75ec00c8dd3418938ed36afa88cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 953985360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &371277509
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,6 +893,12 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1 &504769915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3172838258682602066, guid: 944c75ec00c8dd3418938ed36afa88cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1320559223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &676294898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,6 +1429,12 @@ PrefabInstance:
 --- !u!4 &783441645 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3172838258682602078, guid: 944c75ec00c8dd3418938ed36afa88cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 783441644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &787041096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3172838258682602066, guid: 944c75ec00c8dd3418938ed36afa88cd,
     type: 3}
   m_PrefabInstance: {fileID: 783441644}
   m_PrefabAsset: {fileID: 0}
@@ -2013,12 +2037,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waitpoints:
-  - {fileID: 1563328371}
-  - {fileID: 783441645}
-  - {fileID: 953985361}
-  - {fileID: 2104434474}
-  - {fileID: 343723915}
-  - {fileID: 1320559224}
+  - {fileID: 1678125919}
+  - {fileID: 787041096}
+  - {fileID: 369032414}
+  - {fileID: 363437167}
+  - {fileID: 1728464400}
+  - {fileID: 504769915}
 --- !u!136 &1019985070
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2913,6 +2937,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623703839}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1678125919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3172838258682602066, guid: 944c75ec00c8dd3418938ed36afa88cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1563328370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1728464400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3172838258682602066, guid: 944c75ec00c8dd3418938ed36afa88cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 3172838258488339925}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2104434473
 PrefabInstance:
   m_ObjectHideFlags: 0
