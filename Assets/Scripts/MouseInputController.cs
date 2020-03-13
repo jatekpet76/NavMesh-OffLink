@@ -31,7 +31,7 @@ public class MouseInputController : MonoBehaviour, IAgentInfo
             if (Physics.Raycast(ray, out hit, 100)) {
                 _info = string.Format("{0} to {1}", gameObject.name, hit.transform.gameObject.name);
 
-                _agent.destination = hit.transform.position;
+                _agent.destination = hit.point;
             }
         }
     }
